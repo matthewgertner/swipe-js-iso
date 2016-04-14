@@ -402,8 +402,6 @@
 
             }
 
-            options.callback && options.callback(index, slides[index]);
-
           } else {
 
             if (options.continuous) {
@@ -423,6 +421,8 @@
 
         }
         
+        options.callback && options.callback(index, slides[index]);
+
         delay = options.auto || 0;
 
         // kill touchmove and touchend event listeners until touchstart called again
